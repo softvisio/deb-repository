@@ -1,0 +1,23 @@
+{
+    "name": "deb",
+    "version": "0.0.0",
+    "private": true,
+    "description": "Debian/Ubuntu package repository",
+    "keywords": [
+        "softvisio",
+        "debian package repository",
+        "deb",
+        "apt"
+    ],
+    "homepage": "https://github.com/softvisio/deb",
+    "bugs": {
+        "url": "https://github.com/softvisio/deb/issues",
+        "email": "root <root@softvisio.net>"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/softvisio/deb.git"
+    },
+    "license": "Proprietary Software",
+    "author": "root <root@softvisio.net>"
+}

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# vim: ft=sh
+
+NAME=nvim
+DESCRIPTION="Neovim stable build"
+EPOCH=0
+VERSION=$(git ls-remote --tags https://github.com/neovim/neovim.git | perl -lne 'm[refs/tags/v([\d.]+)$]sm ? print $1 : next' | sort -V | tail -n 1)
+REVISION=0
+ARCHITECTURE=all
+DEPENDS=
+
+PREFIX=/usr/local
+
+function build() {
+    mkdir -p ${DESTDIR}${PREFIX}
+    curl -fsSL https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz | tar -C ${DESTDIR}${PREFIX} --strip-components=1 -xz
+}

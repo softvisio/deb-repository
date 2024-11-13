@@ -1,0 +1,9 @@
+label: Softvisio repository
+
+maintainer: deb@softvisio.net
+gpgKeyName: deb@softvisio.net
+
+component: main
+
+codenames:
+  - "24.04"

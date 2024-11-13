@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# vim: ft=sh
+
+NAME=repo-vivaldi
+DESCRIPTION="Official Vivaldi repository"
+EPOCH=0
+VERSION=1.0.0
+REVISION=1
+ARCHITECTURE=all
+DEPENDS=
+
+function build() {
+    apt-get install -y gpg
+
+    mkdir -p $DESTDIR/usr/share/keyrings
+    curl -fsSL https://repo.vivaldi.com/archive/linux_signing_key.pub | gpg --dearmor -o $DESTDIR/usr/share/keyrings/vivaldi-archive-keyring.gpg
+
+    mkdir -p $DESTDIR/etc/apt/sources.list.d
+    cat << EOF > $DESTDIR/etc/apt/sources.list.d/vivaldi.list
+deb [arch=amd64,armhf signed-by=/usr/share/keyrings/vivaldi-archive-keyring.gpg] https://repo.vivaldi.com/archive/deb stable main
+EOF
+}
