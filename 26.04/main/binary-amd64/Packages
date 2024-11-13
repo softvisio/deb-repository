@@ -1,0 +1,68 @@
+Package: nginx-latest
+Architecture: amd64
+Version: 1.30.6
+Maintainer: deb@softvisio.net
+Installed-Size: 9564
+Depends: libpcre2-8-0, libmaxminddb0
+Recommends:
+Conflicts: nginx-next
+Replaces: nginx-next
+Filename: dists/26.04/main/binary-amd64/nginx-latest_1.30.6_amd64.deb
+Size: 4542518
+MD5sum: 65631b6aaf8a666c15e67fd5189023e7
+SHA1: e7b26671598e77390b69c80ef11b18c7d97ed0ec
+SHA256: 4b597d3e9952c21e2130485e3d934ede8a8504ff860df11f2c09d3ba37945cc9
+SHA512: 46ed17f966ed1a0e20a7fae70b179061309804dab9daf57fd064e13a8375301d07869b4f015ac812ad7d9f511f76efa80305fbe9efff703f1e6507037126155a
+Description: A high performance web server and reverse proxy server
+
+Package: nginx-next
+Architecture: amd64
+Version: 1.31.7
+Maintainer: deb@softvisio.net
+Installed-Size: 9972
+Depends: libpcre2-8-0, libmaxminddb0
+Recommends:
+Conflicts: nginx-latest
+Replaces: nginx-latest
+Filename: dists/26.04/main/binary-amd64/nginx-next_1.31.7_amd64.deb
+Size: 4718016
+MD5sum: 423bd8e3689f60bc7c8fc12c4c98f6e7
+SHA1: 3cb9f686144f32bac60d389f184fd5a9da5cfa10
+SHA256: 54c993c58dc82475ed479c9d1275d7ca32a34cca6fc279b5d28c4acabee4bcbd
+SHA512: 83e2b95c85fb9371d969e0d2e20a234bd44adea59da84efe2c1930d80f1b14c4f73af90e5939519626498bd70c253644f1a68e0e684b1863b33475bddc4a3b15
+Description: A high performance web server and reverse proxy server
+
+Package: postgresql-18-softvisio-admin
+Architecture: amd64
+Version: 1.5.4
+Maintainer: deb@softvisio.net
+Installed-Size: 156
+Depends:
+Recommends:
+Conflicts:
+Replaces:
+Filename: dists/26.04/main/binary-amd64/postgresql-18-softvisio-admin_1.5.4_amd64.deb
+Size: 3754
+MD5sum: 9835b76070d07bacd5706cb8cf60d862
+SHA1: 8b46e815d8aa63c01f6bbc38c8c7d08dee1b574e
+SHA256: 7205b4579827f615788fd2a62f8d222bdaca7c75397cc8571079aa1558e25b03
+SHA512: 7abad6eeddbd771f4d8492ffed9e7ce4ba5ddb84d0057489d24cafb77c51ac626b26e12c254473a6d45f9a7f17b4764020e1e96f4a16414fab68472817dff434
+Description: PostgreSQL admin extension
+
+Package: postgresql-18-softvisio-types
+Architecture: amd64
+Version: 1.4.4
+Maintainer: deb@softvisio.net
+Installed-Size: 76
+Depends:
+Recommends:
+Conflicts:
+Replaces:
+Filename: dists/26.04/main/binary-amd64/postgresql-18-softvisio-types_1.4.4_amd64.deb
+Size: 2148
+MD5sum: 938ad8235d557d6f474e2970c2e89c2b
+SHA1: 2f367aceaa9b0f20c916a1f43f95f501685fbf6b
+SHA256: c1bdf60cabe9655fbef3b1622fd42287a46d1ccd0ba79e588b92344ac5296ee0
+SHA512: 77edc51a416a60c8a3fdfc0b86ca3e3db02439171e2b12727a5ae00f6d973764abd645d451d80c381497efd485bd3cd062cb62e0253e5c386955a1b96fe3da21
+Description: PostgreSQL types extension
+
