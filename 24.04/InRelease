@@ -1,0 +1,40 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Architectures: all amd64
+Codename: 24.04
+Components: main
+Date: Fri, 24 Apr 2026 01:17:27 +0000
+Label: Softvisio repository
+Suite: 24.04
+MD5Sum:
+ 4a36e1c19041953b418663de116953c1             2339 Release
+ 9a5adc01ae537c752c6dfcd698f21318             9100 main/binary-all/Packages
+ 4efc331ebc4e64ff8f071efec9c9a42f             3204 main/binary-all/Packages.gz
+ a35782760767ba00206aed2d40618bae             2500 main/binary-amd64/Packages
+ 0f79cc92bcfaa1fe44d051d03c181aac             1072 main/binary-amd64/Packages.gz
+SHA1:
+ e5615569479ac58440adf11939d016e653ac1e61             2339 Release
+ 1f868674087ec552feef988f0192a9cf9522da69             9100 main/binary-all/Packages
+ 6e97850ae663ffcc06c6e49c1ad522880b2f27a1             3204 main/binary-all/Packages.gz
+ 1ebb3f3be82e961647f2dddcf1ababa9057ddfea             2500 main/binary-amd64/Packages
+ a697c8347ef18dc840eceaadb57443e587a9c187             1072 main/binary-amd64/Packages.gz
+SHA256:
+ 2017d3fc2972d0f30e53a4060ca949bf930fb963589f275d8421b573904e100b             2339 Release
+ efa288cd5801695ae83a34d6dd64aaf266aa89410958432a6b3a6b8ec1239157             9100 main/binary-all/Packages
+ 33473a48a6ed1e57435b3a7f335cb9d12478032786fd2fbb11f8f1d68e2b2d94             3204 main/binary-all/Packages.gz
+ 9232fe39b0e2d0ac140b974bfe1918adfbd7d122b4bd31c255934bfdd5ce9513             2500 main/binary-amd64/Packages
+ 217a7a410d4848417d2fe3398b1718ea8e0164f25190223fd2031f716c83d758             1072 main/binary-amd64/Packages.gz
+SHA512:
+ 225bed7fd15d80de5d4e5ebd11071628bee347fd3edaf12b8b142363a955b311ae4a3d83db95f1c15412bcb8492f80e6b39d80c48e3ee331b5e29b98cf4712d6             2339 Release
+ 229b866ac04ac816884c191e95dd3dd9a994630620bdd7310c9ec0874f68fcf573a77a20f53674d426aefbde061719f6432d45d84c964de0ba6b0221ab6860bc             9100 main/binary-all/Packages
+ 5c8eab9e2ae5b72f7253ee7922cba4f90aa802b51202d095310ec8a57d9a4af34084b545977eb12e0e63bd8d976b2a1e8b63a6704638a871f26a20f9784adfa1             3204 main/binary-all/Packages.gz
+ ebbffb9e795d05bec5f7e5565d5ab361fd759daec61b352be5b335fc920d5363edc68d16c849e961fc25cc9c3df96f0300cd0478996a1e200d4bafe6c15916f5             2500 main/binary-amd64/Packages
+ 7d91e14f4ca8cac8a2aa8749a336157f4c6263a55bd777944551dea84ba81fdf81e90e930b7c65fb138ae2c92ca5f3e568e20f82bf31c18e6f08c55d93ac2a89             1072 main/binary-amd64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iIgEARYKADAWIQQ0CbtrlYNXPsVDSecRJZ8cI8v2lAUCaerEpxIcZGViQHNvZnR2
+aXNpby5uZXQACgkQESWfHCPL9pQl0gEA5kuimPuZRVonLO9/Mlhqb7eUjJ2XXnRj
+XIqWhlCHtiQA/1pZLJwHox9vOWFmJJfK3G6br+2yF8E9vIY8FOv0MlcI
+=RB3a
+-----END PGP SIGNATURE-----

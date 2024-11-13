@@ -1,0 +1,28 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Architectures: all
+Codename: 26.04
+Components: main
+Date: Fri, 24 Apr 2026 01:17:24 +0000
+Label: Softvisio repository
+Suite: 26.04
+MD5Sum:
+ 9a5adc01ae537c752c6dfcd698f21318             9100 main/binary-all/Packages
+ 4efc331ebc4e64ff8f071efec9c9a42f             3204 main/binary-all/Packages.gz
+SHA1:
+ 1f868674087ec552feef988f0192a9cf9522da69             9100 main/binary-all/Packages
+ 6e97850ae663ffcc06c6e49c1ad522880b2f27a1             3204 main/binary-all/Packages.gz
+SHA256:
+ efa288cd5801695ae83a34d6dd64aaf266aa89410958432a6b3a6b8ec1239157             9100 main/binary-all/Packages
+ 33473a48a6ed1e57435b3a7f335cb9d12478032786fd2fbb11f8f1d68e2b2d94             3204 main/binary-all/Packages.gz
+SHA512:
+ 229b866ac04ac816884c191e95dd3dd9a994630620bdd7310c9ec0874f68fcf573a77a20f53674d426aefbde061719f6432d45d84c964de0ba6b0221ab6860bc             9100 main/binary-all/Packages
+ 5c8eab9e2ae5b72f7253ee7922cba4f90aa802b51202d095310ec8a57d9a4af34084b545977eb12e0e63bd8d976b2a1e8b63a6704638a871f26a20f9784adfa1             3204 main/binary-all/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iIgEARYKADAWIQQ0CbtrlYNXPsVDSecRJZ8cI8v2lAUCaerEpRIcZGViQHNvZnR2
+aXNpby5uZXQACgkQESWfHCPL9pR7tgEAlVJ9fg3+k54AzLlLy0mxmZV+mO24mWD5
+oztakZiMt0cBAJ37y0H5B5r5WlcKp5abO7sUlurEViuOFCgjzlaKKDsJ
+=DWeG
+-----END PGP SIGNATURE-----
