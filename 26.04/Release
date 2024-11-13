@@ -1,0 +1,30 @@
+Architectures: all amd64
+Codename: 26.04
+Components: main
+Date: Sun, 25 Oct 2026 10:20:19 +0000
+Label: Softvisio repository
+Suite: 26.04
+MD5Sum:
+ 9c1d152ed787416ad1cc9589f5337d93             2339 Release
+ 22d020a8204a09205a725b2592a4cfed             9696 main/binary-all/Packages
+ 369fe55926c6e8c002b380245b01f7c8             3399 main/binary-all/Packages.gz
+ ce21a1e96802eb5c08b2aa87bbf82760             2507 main/binary-amd64/Packages
+ 7660bb8abe7dc0164a8586b8fed206c2             1093 main/binary-amd64/Packages.gz
+SHA1:
+ 354fe1f4cd1af7b7dafc4b7ed92c0cd92723fc94             2339 Release
+ 0c02227b105f7693ff02181f52f2a38d0a3d3326             9696 main/binary-all/Packages
+ 1822de58c2e473afda0c16ac351f339dff360f2d             3399 main/binary-all/Packages.gz
+ a25439c4872ab406919f4ba26943d8931f2ddff8             2507 main/binary-amd64/Packages
+ 5ec0b35b44c0f29ae08743689e809be3eea189b1             1093 main/binary-amd64/Packages.gz
+SHA256:
+ 3c4a3f3ade546286efb3ded38ce55e0d517fb0493aa5b3948bb581ca5107d355             2339 Release
+ 4cd87489a39faacb218761e8167cd74af89bcfa03be173799211df7072673aac             9696 main/binary-all/Packages
+ fd7b9d717361336ba2f5dc7202f0f14b564c5b94e74d13f2e415224c535038f8             3399 main/binary-all/Packages.gz
+ c31cb2d49c044b1aaf6922f10eab444d45f4f6e5a655fc953e31aaf485a654ed             2507 main/binary-amd64/Packages
+ 3ac96576a080ec60566a53e64616dcf438b7e3401489e2699463d075e4cabf92             1093 main/binary-amd64/Packages.gz
+SHA512:
+ b12b5ce6981fd482c42de27736e9dd08952b8044c20c8a3e59d1c58502fe9843293d7c826fb58cd54d5dc6b138401463f1bc7592de38b44058957229a5e61358             2339 Release
+ 12004de95254026d76d2f0355bfa359fd5b3bd647e8619bbf3ae106838566513a606816c67fb3f7abf81341cbe789b7cef284cc764f01d824037e288ad8e207a             9696 main/binary-all/Packages
+ 64bacc60da7ddb851510374b6de827ed994b627e6ef21962c32a2342de4d4daaa0a57bf77c7fff571cb2c5078aa06543919233f6a649fef6986b833055a30017             3399 main/binary-all/Packages.gz
+ 52031ba741a6438fc557cc05b7358e6197cd7665077430b0c4045078a8b8628cc2c5c5d0d45422d23c9e993034c3a1442ac6d9a2f9ff2b2be56968d7e7df630a             2507 main/binary-amd64/Packages
+ 3e33313dcc1e762a91b03761fced75c95ce6e4e631686fa5512220036367725a258c1387a669f5ee68295b2da44ff9a0f96b171f19476ab9613b528e8b13fc6c             1093 main/binary-amd64/Packages.gz
