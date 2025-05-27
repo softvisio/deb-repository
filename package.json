@@ -1,6 +1,5 @@
 {
     "name": "deb",
-    "version": "0.0.0",
     "private": true,
     "description": "Debian/Ubuntu package repository",
     "keywords": [
