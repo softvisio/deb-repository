@@ -2,7 +2,7 @@
 # vim: ft=sh
 
 NAME=repo-microsoft-edge
-DESCRIPTION="Official Microsoft Edge repository"
+DESCRIPTION="Microsoft Edge official repository"
 EPOCH=0
 VERSION=1.0.0
 REVISION=0

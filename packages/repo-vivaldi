@@ -2,7 +2,7 @@
 # vim: ft=sh
 
 NAME=repo-vivaldi
-DESCRIPTION="Official Vivaldi repository"
+DESCRIPTION="Vivaldi official repository"
 EPOCH=0
 VERSION=1.0.0
 REVISION=1

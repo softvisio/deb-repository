@@ -2,7 +2,7 @@
 # vim: ft=sh
 
 NAME=repo-git
-DESCRIPTION="Git stable releases"
+DESCRIPTION="Git official repository"
 EPOCH=0
 VERSION=1.0.0
 REVISION=0

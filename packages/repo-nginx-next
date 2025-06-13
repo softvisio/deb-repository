@@ -2,7 +2,7 @@
 # vim: ft=sh
 
 NAME=repo-nginx-next
-DESCRIPTION="Nginx mainline releases"
+DESCRIPTION="Nginx mainline official repository"
 EPOCH=0
 VERSION=1.0.0
 REVISION=0

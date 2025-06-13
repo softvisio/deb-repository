@@ -2,7 +2,7 @@
 # vim: ft=sh
 
 NAME=repo-git-lfs
-DESCRIPTION="Git LFS stable releases"
+DESCRIPTION="Git LFS official repository"
 EPOCH=0
 VERSION=1.0.0
 REVISION=0
