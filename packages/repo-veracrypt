@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# vim: ft=sh
+
+NAME=repo-veracrypt
+DESCRIPTION="Veracrypt official repository"
+EPOCH=0
+VERSION=1.0.0
+REVISION=0
+ARCHITECTURE=all
+DEPENDS=
+
+# NOTE: https://launchpad.net/~unit193/+archive/ubuntu/encryption
+FINGERPRINT=A2464CAD19240F2C59FC031F9B9FBDD5426B515F
+
+function build() {
+    cat << EOF > $DEBIAN/postinst
+#!/usr/bin/env bash
+
+VERSION_CODENAME=\$(source /etc/os-release && echo \$VERSION_CODENAME)
+
+sed -i -e "/ARCH/ s/ARCH/\$(dpkg --print-architecture)/" /etc/apt/sources.list.d/veracrypt.list
+sed -i -e "/VERSION_CODENAME/ s/VERSION_CODENAME/\$VERSION_CODENAME/" /etc/apt/sources.list.d/veracrypt.list
+EOF
+    chmod +x $DEBIAN/postinst
+
+    # install
+    apt-get install -y gpg
+
+    mkdir -p $DESTDIR/usr/share/keyrings
+    curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x${FINGERPRINT}" | gpg --dearmor -o $DESTDIR/usr/share/keyrings/veracrypt-archive-keyring.gpg
+
+    mkdir -p $DESTDIR/etc/apt/sources.list.d
+    cat << EOF > $DESTDIR/etc/apt/sources.list.d/veracrypt.list
+deb [arch=ARCH signed-by=/usr/share/keyrings/veracrypt-archive-keyring.gpg] https://ppa.launchpadcontent.net/unit193/encryption/ubuntu VERSION_CODENAME main
+EOF
+}

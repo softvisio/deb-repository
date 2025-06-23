@@ -9,7 +9,7 @@ REVISION=0
 ARCHITECTURE=all
 DEPENDS=
 
-# NOTE https://launchpad.net/~git-core/+archive/ubuntu/ppa
+# NOTE: https://launchpad.net/~git-core/+archive/ubuntu/ppa
 FINGERPRINT=F911AB184317630C59970973E363C90F8F1B6217
 
 function build() {
