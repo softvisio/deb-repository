@@ -17,7 +17,7 @@ function build() {
 
     mkdir -p $DESTDIR/etc/profile.d
     cat << EOF > $DESTDIR/etc/profile.d/n.sh
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 export N_PREFIX=/usr/n
 
