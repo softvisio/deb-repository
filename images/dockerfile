@@ -11,7 +11,7 @@ ADD . /tmp/setup
 WORKDIR /var/local
 
 RUN \
-    chmpd +x /tmp/setup/setup.sh \
+    chmod +x /tmp/setup/setup.sh \
     && /tmp/setup/setup.sh \
     && rm -rf /tmp/setup
 
