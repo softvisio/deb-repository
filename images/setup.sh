@@ -9,7 +9,8 @@ apt-get update
 
 apt-get install -y curl
 
-source <(curl -fsSL https://raw.githubusercontent.com/softvisio/scripts/main/setup-host.sh)
+script=$(curl -fsSL "https://raw.githubusercontent.com/softvisio/scripts/main/setup-host.sh")
+source <(echo "$script")
 
 apt-get install -y \
     apt-utils git gcc g++ make cmake libssl-dev gpg \

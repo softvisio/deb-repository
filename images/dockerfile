@@ -11,7 +11,8 @@ ADD . /tmp/setup
 WORKDIR /var/local
 
 RUN \
-    bash /tmp/setup/setup.sh \
-    rm -rf /tmp/setup
+    chmpd +x /tmp/setup/setup.sh \
+    && /tmp/setup/setup.sh \
+    && rm -rf /tmp/setup
 
 ENTRYPOINT [ "/usr/bin/env", "bash", "-l" ]
