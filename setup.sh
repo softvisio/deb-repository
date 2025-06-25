@@ -12,7 +12,7 @@ trap 'echo -e "⚠  Error ($0:$LINENO): $(sed -n "${LINENO}p" "$0" 2> /dev/null 
 repo_name=softvisio
 repo_slug=softvisio/deb
 component=main
-version_id=$(. /etc/os-release && echo $VERSION_iD)
+version_id=$(. /etc/os-release && echo $VERSION_ID)
 
 function _remove() {
     rm -rf /usr/share/keyrings/${repo_name}-archive-keyring.gpg
