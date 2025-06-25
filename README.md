@@ -3,13 +3,13 @@
 ### Install repository
 
 ```sh
-/usr/bin/env bash <(curl -fsSL https://raw.githubusercontent.com/softvisio/deb/main/setup.sh) install
+/usr/bin/env bash <(curl -fsSL "https://raw.githubusercontent.com/softvisio/deb/main/setup.sh") install
 ```
 
 ### Remove repository
 
 ```sh
-/usr/bin/env bash <(curl -fsSL https://raw.githubusercontent.com/softvisio/deb/main/setup.sh) remove
+/usr/bin/env bash <(curl -fsSL "https://raw.githubusercontent.com/softvisio/deb/main/setup.sh") remove
 ```
 
 ### Manually install GPG key
@@ -17,7 +17,7 @@
 Import public key
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/softvisio/deb/main/public-key.asc | gpg --dearmor -o /usr/share/keyrings/softvisio-archive-keyring.gpg
+curl -fsSL "https://raw.githubusercontent.com/softvisio/deb/main/public-key.asc" | gpg --dearmor -o "/usr/share/keyrings/softvisio-archive-keyring.gpg"
 ```
 
 ### GPG
