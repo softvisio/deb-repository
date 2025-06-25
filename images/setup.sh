@@ -3,7 +3,7 @@
 set -Eeuo pipefail
 trap 'echo -e "⚠  Error ($0:$LINENO): $(sed -n "${LINENO}p" "$0" 2> /dev/null | grep -oE "\S.*\S|\S" || true)" >&2; return 3 2> /dev/null || exit 3' ERR
 
-POSTGRESQL_VERSION=17
+postgresql_version=17
 
 apt-get update
 
@@ -14,4 +14,4 @@ source <(echo "$script")
 
 apt-get install -y \
     apt-utils git gcc g++ make cmake libssl-dev gpg \
-    postgresql-server-dev-$POSTGRESQL_VERSION libkrb5-dev libipc-run-perl
+    postgresql-server-dev-$postgresql_version libkrb5-dev libipc-run-perl
