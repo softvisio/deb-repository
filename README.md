@@ -3,13 +3,15 @@
 ### Install repository
 
 ```sh
-bash <(curl -fsSL "https://raw.githubusercontent.com/softvisio/deb/main/setup.sh") install
+script=$(curl -fsSL "https://raw.githubusercontent.com/softvisio/deb/main/setup.sh")
+bash <(echo "$script") install
 ```
 
 ### Remove repository
 
 ```sh
-bash <(curl -fsSL "https://raw.githubusercontent.com/softvisio/deb/main/setup.sh") remove
+script=$(curl -fsSL "https://raw.githubusercontent.com/softvisio/deb/main/setup.sh")
+bash <(echo "$script") remove
 ```
 
 ### Manually install GPG key
