@@ -8,6 +8,8 @@ VERSION=$(git ls-remote --tags https://github.com/neovim/neovim.git | perl -lne 
 REVISION=0
 ARCHITECTURE=all
 DEPENDS=
+CONFLICTS="nvim-next"
+REPLACES="nvim-next"
 
 PREFIX=/usr/local
 
