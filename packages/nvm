@@ -24,7 +24,7 @@ function build() {
 export NVM_DIR="$nvm_prefix"
 export NVM_SYMLINK_CURRENT=true
 
-[[ :\$PATH: == *":\$NVM_PREFIX/current/bin:"* ]] || PATH+=":\$NVM_PREFIX/current/bin"
+[[ :\$PATH: == *":\$NVM_DIR/current/bin:"* ]] || PATH+=":\$NVM_DIR/current/bin"
 
 function nvm() {
     source \$NVM_DIR/nvm
