@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# vim: ft=sh
+
+tag=$(curl -fsSL "https://api.github.com/repos/nvm-sh/nvm/releases/latest" | jq --raw-output ".tag_name")
+
+NAME=nvm
+DESCRIPTION="Node version management"
+EPOCH=0
+VERSION=$(tag:1)
+REVISION=0
+ARCHITECTURE=all
+DEPENDS=
+
+NVM_PREFIX=/usr/nvm
+
+function build() {
+    mkdir -p ${DESTDIR}${NVM_PREFIX}
+    curl -fsSL "https://raw.githubusercontent.com/nvm-sh/nvm/${tag}/nvm.sh" -o ${DESTDIR}${NVM_PREFIX}/nvm
+
+    mkdir -p $DESTDIR/etc/profile.d
+    cat << EOF > $DESTDIR/etc/profile.d/nvm.sh
+#!/usr/bin/env bash
+
+export NVM_DIR="$NVM_PREFIX"
+export NVM_SYMLINK_CURRENT=true
+
+[[ :\$PATH: == *":\$NVM_PREFIX/bin:"* ]] || PATH+=":\$NVM_PREFIX/bin"
+
+function nvm() {
+    source \$NVM_DIR/nvm
+
+    nvm "\$@"
+}
+EOF
+}
