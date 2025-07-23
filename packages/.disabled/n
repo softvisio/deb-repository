@@ -19,7 +19,7 @@ function build() {
     cat << EOF > $DESTDIR/etc/profile.d/n.sh
 #!/usr/bin/env bash
 
-export N_PREFIX=/usr/n
+export N_PREFIX="$N_PREFIX"
 
 NPM_PREFIX=\$(realpath ~)/.npm/bin
 
