@@ -22,12 +22,13 @@ function build() {
     cat << EOF > $DESTDIR/etc/profile.d/n.sh
 #!/usr/bin/env bash
 
-export N_PREFIX="${n_prefix}/n"
+export N_PREFIX="${n_prefix}/node"
+export N_CACHE_PREFIX="${n_prefix}/cache"
 
 # global npm bin path
 npm_prefix=\$(realpath ~)/.npm/bin
 [[ :\$PATH: == *":\$npm_prefix:"* ]] || PATH="\$npm_prefix:\$PATH"
 
-[[ :\$PATH: == *":\$N_PREFIX/bin:"* ]] || PATH+=":\$N_PREFIX/bin"
+[[ :\$PATH: == *":\$N_PREFIX/node/bin:"* ]] || PATH+=":\$N_PREFIX/node/bin"
 EOF
 }
