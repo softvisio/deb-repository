@@ -11,11 +11,11 @@ REVISION=0
 ARCHITECTURE=all
 DEPENDS=
 
-nvm_prefix=/usr/nvm
+nvm_prefix=/usr/local/nvm
 
 function build() {
-    mkdir -p ${DESTDIR}${nvm_prefix}
-    curl -fsSL "https://raw.githubusercontent.com/nvm-sh/nvm/${tag}/nvm.sh" -o ${DESTDIR}${nvm_prefix}/nvm
+    mkdir -p "${DESTDIR}${nvm_prefix}"
+    curl -fsSL "https://raw.githubusercontent.com/nvm-sh/nvm/${tag}/nvm.sh" -o "${DESTDIR}${nvm_prefix}/nvm"
 
     mkdir -p $DESTDIR/etc/profile.d
     cat << EOF > $DESTDIR/etc/profile.d/nvm.sh
@@ -28,12 +28,14 @@ export NVM_SYMLINK_CURRENT=true
 npm_prefix=\$(realpath ~)/.npm/bin
 [[ :\$PATH: == *":\$npm_prefix:"* ]] || PATH="\$npm_prefix:\$PATH"
 
-[[ :\$PATH: == *":\$NVM_DIR/current/bin:"* ]] || PATH+=":\$NVM_DIR/current/bin"
+# [[ :\$PATH: == *":\$NVM_DIR/current/bin:"* ]] || PATH+=":\$NVM_DIR/current/bin"
 
-function nvm() {
-    source \$NVM_DIR/nvm
+source \$NVM_DIR/nvm
 
-    nvm "\$@"
-}
+# function nvm() {
+#     source \$NVM_DIR/nvm
+#
+#     nvm "\$@"
+# }
 EOF
 }
