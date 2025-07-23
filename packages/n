@@ -29,6 +29,6 @@ export N_CACHE_PREFIX="${n_prefix}"
 npm_prefix=\$(realpath ~)/.npm/bin
 [[ :\$PATH: == *":\$npm_prefix:"* ]] || PATH="\$npm_prefix:\$PATH"
 
-[[ :\$PATH: == *":\$N_PREFIX/n/node/bin:"* ]] || PATH+=":\$N_PREFIX/n/node/bin"
+[[ :\$PATH: == *":\$N_PREFIX/bin:"* ]] || PATH+=":\$N_PREFIX/bin"
 EOF
 }
