@@ -1,25 +1,27 @@
 #!/usr/bin/env bash
 # vim: ft=sh
 
+tag=$(curl -fsSL "https://api.github.com/repos/tj/n/releases/latest" | jq --raw-output ".tag_name")
+
 NAME=n
 DESCRIPTION="Node version management"
 EPOCH=0
-VERSION=$(git ls-remote --tags https://github.com/tj/n.git | perl -lne 'm[refs/tags/v([\d.]+)$]sm ? print $1 : next' | sort -V | tail -n 1)
+VERSION=${tag:1}
 REVISION=0
 ARCHITECTURE=all
 DEPENDS=
 
-N_PREFIX=/usr/n
+n_prefix=/usr/n
 
 function build() {
-    mkdir -p ${DESTDIR}${N_PREFIX}
-    curl -fsSL https://github.com/tj/n/archive/refs/tags/v${VERSION}.tar.gz | tar -C ${DESTDIR}${N_PREFIX} --strip-components=1 -xz
+    mkdir -p ${DESTDIR}${n_prefix}/bin
+    curl -fsSL "https://raw.githubusercontent.com/tj/n/${tag}/bin/n" -o ${DESTDIR}${n_prefix}/bin/n
 
     mkdir -p $DESTDIR/etc/profile.d
     cat << EOF > $DESTDIR/etc/profile.d/n.sh
 #!/usr/bin/env bash
 
-export N_PREFIX="$N_PREFIX"
+export N_PREFIX="$n_prefix"
 
 NPM_PREFIX=\$(realpath ~)/.npm/bin
 
