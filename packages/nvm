@@ -38,5 +38,5 @@ source "$prefix/nvm/nvm"
 nvm "\$@"
 EOF
 
-    chmod +x "${DESTDIR}${nvm_prefix}/bin/nvm"
+    chmod +x "${DESTDIR}${prefix}/bin/nvm"
 }
