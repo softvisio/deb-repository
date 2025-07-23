@@ -21,17 +21,17 @@ function build() {
     cat << EOF > "$DESTDIR/etc/profile.d/nvm.sh"
 #!/usr/bin/env bash
 
+if [[ -z \$NVM_DIR ]]; then
+    export NVM_DIR="$nvm_prefix/nvm/data"
+    # export NVM_SYMLINK_CURRENT=true
+fi
+
 source "$nvm_prefix/nvm/nvm"
 EOF
 
     mkdir -p "${DESTDIR}${nvm_prefix}/bin"
     cat << EOF > "${DESTDIR}${nvm_prefix}/bin/nvm"
 #!/usr/bin/env bash
-
-if [[ -z \$NVM_DIR ]]; then
-    export NVM_DIR="$nvm_prefix/nvm/data"
-    # export NVM_SYMLINK_CURRENT=true
-fi
 
 source "$nvm_prefix/nvm/nvm"
 
