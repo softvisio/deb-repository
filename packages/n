@@ -11,17 +11,18 @@ REVISION=0
 ARCHITECTURE=all
 DEPENDS=
 
-n_prefix=/usr/n
+n_prefix=/usr/local
 
 function build() {
-    mkdir -p ${DESTDIR}${n_prefix}/bin
-    curl -fsSL "https://raw.githubusercontent.com/tj/n/${tag}/bin/n" -o ${DESTDIR}${n_prefix}/bin/n
+    mkdir -p "${DESTDIR}${n_prefix}/bin"
+    curl -fsSL "https://raw.githubusercontent.com/tj/n/${tag}/bin/n" -o "${DESTDIR}${n_prefix}/bin/n"
+    chmod +x "${DESTDIR}${n_prefix}/bin/n"
 
     mkdir -p $DESTDIR/etc/profile.d
     cat << EOF > $DESTDIR/etc/profile.d/n.sh
 #!/usr/bin/env bash
 
-export N_PREFIX="$n_prefix"
+export N_PREFIX="${n_prefix}/n"
 
 # global npm bin path
 npm_prefix=\$(realpath ~)/.npm/bin
