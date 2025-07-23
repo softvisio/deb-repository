@@ -11,19 +11,21 @@ REVISION=0
 ARCHITECTURE=all
 DEPENDS=
 
-n_prefix=/usr/local
+prefix=/usr/local
 
 function build() {
-    mkdir -p "${DESTDIR}${n_prefix}/bin"
-    curl -fsSL "https://raw.githubusercontent.com/tj/n/${tag}/bin/n" -o "${DESTDIR}${n_prefix}/bin/n"
-    chmod +x "${DESTDIR}${n_prefix}/bin/n"
+    mkdir -p "${DESTDIR}${prefix}/bin"
+    curl -fsSL "https://raw.githubusercontent.com/tj/n/${tag}/bin/n" -o "${DESTDIR}${prefix}/bin/n"
+    chmod +x "${DESTDIR}${prefix}/bin/n"
 
     mkdir -p $DESTDIR/etc/profile.d
     cat << EOF > $DESTDIR/etc/profile.d/n.sh
 #!/usr/bin/env bash
 
-export N_PREFIX="${n_prefix}/n/node"
-export N_CACHE_PREFIX="${n_prefix}"
+if [[ -z \$N_PREFIX ]]; then
+    export N_PREFIX="~/.n/node"
+    export N_CACHE_PREFIX="~/.n"
+fi
 
 [[ :\$PATH: == *":\$N_PREFIX/bin:"* ]] || PATH+=":\$N_PREFIX/bin"
 EOF
