@@ -23,9 +23,9 @@ function build() {
 
 export N_PREFIX="$n_prefix"
 
-NPM_PREFIX=\$(realpath ~)/.npm/bin
-
-[[ :\$PATH: == *":\$NPM_PREFIX:"* ]] || PATH="\$NPM_PREFIX:\$PATH"
+# global npm bin path
+npm_prefix=\$(realpath ~)/.npm/bin
+[[ :\$PATH: == *":\$npm_prefix:"* ]] || PATH="\$npm_prefix:\$PATH"
 
 [[ :\$PATH: == *":\$N_PREFIX/bin:"* ]] || PATH+=":\$N_PREFIX/bin"
 EOF
