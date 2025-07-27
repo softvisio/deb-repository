@@ -17,7 +17,7 @@ function build() {
     mkdir -p "${DESTDIR}${prefix}/bin"
 
     tmp_dir=$(mktemp -d)
-    curl -fsSL "https://github.com/Schniz/fnm/releases/latest/download/lunux.zip" -o "$tmp_dir/fnm.zip"
+    curl -fsSL "https://github.com/schniz/fnm/releases/latest/download/fnm-linux.zip" -o "$tmp_dir/fnm.zip"
     unzip -q "$tmp_dir/$fnm.zip" -d "$tmp_dir"
     mv "$tmp_dir/fnm" "${DESTDIR}${prefix}/bin/fnm"
     rm -rf "$tmp_dir"
