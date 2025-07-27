@@ -15,7 +15,12 @@ prefix=/usr/local
 
 function build() {
     mkdir -p "${DESTDIR}${prefix}/bin"
-    curl -fsSL "https://raw.githubusercontent.com/tj/n/${tag}/bin/n" -o "${DESTDIR}${prefix}/bin/n"
+
+    tmp_dir=$(mktemp -d)
+    curl -fsSL "https://github.com/Schniz/fnm/releases/latest/download/lunux.zip" -o "$tmp_dir/fnm.zip"
+    unzip -q "$tmp_dir/$fnm.zip" -d "$tmp_dir"
+    mv "$tmp_dir/fnm" "${DESTDIR}${prefix}/bin/fnm"
+    rm -rf "$tmp_dir"
     chmod +x "${DESTDIR}${prefix}/bin/fnm"
 
     mkdir -p $DESTDIR/etc/profile.d
