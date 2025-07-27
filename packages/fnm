@@ -27,7 +27,7 @@ function build() {
     cat << EOF > $DESTDIR/etc/profile.d/fnm.sh
 #!/usr/bin/env bash
 
-if [[ -z \$FNM_DIR ]]; then
+if [[ -z \${FNM_DIR:-} ]]; then
     export FNM_DIR=\$(realpath ~)/.local/share/fnm
     export FNM_MULTISHELL_PATH=\$FNM_DIR/current
 

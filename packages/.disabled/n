@@ -22,7 +22,7 @@ function build() {
     cat << EOF > $DESTDIR/etc/profile.d/n.sh
 #!/usr/bin/env bash
 
-if [[ -z \$N_PREFIX ]]; then
+if [[ -z \${N_PREFIX:-} ]]; then
     export N_CACHE_PREFIX="\$(realpath ~)/.local/share/n"
     export N_PREFIX=\$N_CACHE_PREFIX/current
 fi

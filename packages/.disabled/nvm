@@ -21,7 +21,7 @@ function build() {
     cat << EOF > "$DESTDIR/etc/profile.d/nvm.sh"
 #!/usr/bin/env bash
 
-if [[ -z \$NVM_DIR ]]; then
+if [[ -z \${NVM_DIR:-} ]]; then
     export NVM_DIR="\$(realpath ~)/.local/share/nvm"
     # export NVM_SYMLINK_CURRENT=true
 fi
