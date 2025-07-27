@@ -22,7 +22,7 @@ function build() {
 #!/usr/bin/env bash
 
 if [[ -z \$NVM_DIR ]]; then
-    export NVM_DIR="\$(realpath ~)/.nvm"
+    export NVM_DIR="\$(realpath ~)/local/share/nvm"
     # export NVM_SYMLINK_CURRENT=true
 fi
 
