@@ -28,7 +28,7 @@ function build() {
 #!/usr/bin/env bash
 
 if [[ -z \$FNM_DIR ]]; then
-    export FNM_DIR=\$(realpath ~)/local/share/fnm
+    export FNM_DIR=\$(realpath ~)/.local/share/fnm
     export FNM_MULTISHELL_PATH=\$FNM_DIR/current
 
     export FNM_VERSION_FILE_STRATEGY=local
