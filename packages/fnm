@@ -39,6 +39,6 @@ if [[ -z \$FNM_DIR ]]; then
     export FNM_ARCH=x64
 fi
 
-[[ :\$PATH: == *":\$FNM_MULTISHELL_PATH:"* ]] || PATH+=":\$FNM_MULTISHELL_PATH"
+[[ :\$PATH: == *":\$FNM_MULTISHELL_PATH/bin:"* ]] || PATH+=":\$FNM_MULTISHELL_PATH/bin"
 EOF
 }
