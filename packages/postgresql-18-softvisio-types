@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # vim: ft=sh
 
-POSTGRESQL_VERSION=18
+postgresql_version=18
 
 NAME=postgresql-$POSTGRESQL_VERSION-softvisio-types
 DESCRIPTION="PostgreSQL types extension"
@@ -11,7 +11,8 @@ REVISION=0
 ARCHITECTURE=source
 
 function build() {
-    apt-get install -y postgresql-server-dev-$POSTGRESQL_VERSION gcc cmake make libssl-dev libkrb5-dev libipc-run-perl
+    apt-get install -y postgresql-server-dev-$postgresql_version libkrb5-dev libipc-run-perl \
+        gcc cmake make libssl-dev
 
     curl -fsSL https://github.com/softvisio/postgresql-softvisio-types/archive/v$VERSION.tar.gz | tar --strip-components=1 -xzf -
 
