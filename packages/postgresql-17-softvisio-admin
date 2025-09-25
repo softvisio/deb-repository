@@ -3,7 +3,7 @@
 
 postgresql_version=17
 
-NAME=postgresql-$POSTGRESQL_VERSION-softvisio-admin
+NAME=postgresql-$postgresql_version-softvisio-admin
 DESCRIPTION="PostgreSQL admin extension"
 EPOCH=0
 VERSION=$(git ls-remote --tags https://github.com/softvisio/postgresql-softvisio-admin.git | perl -lne 'm[refs/tags/v([\d.]+)$]sm ? print $1 : next' | sort -V | tail -n 1)
