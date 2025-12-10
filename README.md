@@ -77,7 +77,7 @@ git push -u origin dists
 You need `@softvisio/cli` package:
 
 ```sh
-npm install --global @softvisio/cli
+npm install --registry https://npm.pkg.github.com/ --global @softvisio/cli
 ```
 
 Build docker images:
