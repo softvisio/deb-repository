@@ -1,5 +1,5 @@
 {
-    "name": "deb",
+    "name": "@softvisio/deb",
     "private": true,
     "description": "Debian/Ubuntu package repository",
     "keywords": [
