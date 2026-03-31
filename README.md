@@ -83,7 +83,7 @@ npm install --global @softvisio/cli
 Build docker images:
 
 ```sh
-softvisio-cli deb build-images
+softvisio-cli debian-repository build-images
 ```
 
 Build packages:
