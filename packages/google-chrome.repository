@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # vim: ft=sh
 
-NAME=repo-google-chrome
+NAME=google-chrome.repository
 DESCRIPTION="Google Chrome official repository"
 EPOCH=0
 VERSION=1.0.0

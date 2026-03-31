@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # vim: ft=sh
 
-NAME=repo-nginx-next
+NAME=nginx-next.repository
 DESCRIPTION="Nginx mainline official repository"
 EPOCH=0
 VERSION=1.0.0
