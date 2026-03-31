@@ -1,10 +1,10 @@
 {
-    "name": "@softvisio/deb",
+    "name": "@softvisio/deb-repository",
     "private": true,
-    "description": "Debian/Ubuntu package repository",
+    "description": "Deb packages repository",
     "keywords": [
         "softvisio",
-        "debian package repository",
+        "deb packages repository",
         "deb",
         "apt"
     ],

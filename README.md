@@ -1,4 +1,4 @@
-# Debian package repository
+# Deb packages repository
 
 ### Install repository
 
@@ -83,21 +83,21 @@ npm install --global @softvisio/cli
 Build docker images:
 
 ```sh
-softvisio-cli debian-repository build-images
+softvisio-cli deb-repository build-images
 ```
 
 Build packages:
 
 ```sh
 # build all packages
-softvisio-cli debian-repository build-packages
+softvisio-cli deb-repository build-packages
 
 # build "nginx-latest" package
-softvisio-cli debian-repository build-packages nginx-latest
+softvisio-cli deb-repository build-packages nginx-latest
 ```
 
 Update repository data:
 
 ```sh
-softvisio-cli debian-repository update
+softvisio-cli deb-repository update
 ```
