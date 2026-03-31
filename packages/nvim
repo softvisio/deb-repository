@@ -7,7 +7,7 @@ EPOCH=0
 VERSION=$(git ls-remote --tags https://github.com/neovim/neovim.git | perl -lne 'm[refs/tags/v([\d.]+)$]sm ? print $1 : next' | sort -V | tail -n 1)
 REVISION=0
 ARCHITECTURE=all
-DEPENDS=
+DEPENDS="gcc, tree-sitter-cli"
 CONFLICTS="nvim-next"
 REPLACES="nvim-next"
 
