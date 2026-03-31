@@ -8,14 +8,14 @@
         "deb",
         "apt"
     ],
-    "homepage": "https://github.com/softvisio/deb",
+    "homepage": "https://github.com/softvisio/deb-repository",
     "bugs": {
-        "url": "https://github.com/softvisio/deb/issues",
+        "url": "https://github.com/softvisio/deb-repository/issues",
         "email": "root <root@softvisio.net>"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/softvisio/deb.git"
+        "url": "git+https://github.com/softvisio/deb-repository.git"
     },
     "license": "Proprietary Software",
     "author": "root <root@softvisio.net>"

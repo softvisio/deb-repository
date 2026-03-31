@@ -3,14 +3,14 @@
 ### Install repository
 
 ```sh
-script=$(curl -fsSL "https://raw.githubusercontent.com/softvisio/deb/main/setup.sh")
+script=$(curl -fsSL "https://raw.githubusercontent.com/softvisio/deb-repository/main/setup.sh")
 bash <(echo "$script") install
 ```
 
 ### Remove repository
 
 ```sh
-script=$(curl -fsSL "https://raw.githubusercontent.com/softvisio/deb/main/setup.sh")
+script=$(curl -fsSL "https://raw.githubusercontent.com/softvisio/deb-repository/main/setup.sh")
 bash <(echo "$script") remove
 ```
 
@@ -19,7 +19,7 @@ bash <(echo "$script") remove
 Import public key
 
 ```sh
-curl -fsSL "https://raw.githubusercontent.com/softvisio/deb/main/public-key.asc" | gpg --dearmor -o "/usr/share/keyrings/softvisio-archive-keyring.gpg"
+curl -fsSL "https://raw.githubusercontent.com/softvisio/deb-repository/main/public-key.asc" | gpg --dearmor -o "/usr/share/keyrings/softvisio-archive-keyring.gpg"
 ```
 
 ### GPG
@@ -61,10 +61,10 @@ gpg --clearsign private-key.asc
 
 ```sh
 # clone "main" branch
-git clone --single-branch --branch main git@github.com:softvisio/deb.git
+git clone --single-branch --branch main git@github.com:softvisio/deb-repository.git
 
 # clone "dists" branch
-git clone --single-branch --branch dists git@github.com:softvisio/deb.git dists
+git clone --single-branch --branch dists git@github.com:softvisio/deb-repository.git dists
 
 # init "dists" branch
 git switch --orphan dists
