@@ -30,6 +30,9 @@ function build() {
     cmake --build . --config Release --target brotlienc
     popd
 
+    # geoip2
+    git clone https://github.com/leev/ngx_http_geoip2_module
+
     # build
     # --user=%{nginx_user} \
     # --group=%{nginx_user} \
@@ -70,7 +73,8 @@ function build() {
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \
         --with-stream_realip_module \
-        --add-module=ngx_brotli
+        --add-module=ngx_brotli \
+        --add-module=ngx_http_geoip2_module
 
     make $MAKE_FLAGS
 
