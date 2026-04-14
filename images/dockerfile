@@ -10,15 +10,29 @@ ADD . /tmp/setup
 
 WORKDIR /var/local
 
+ENTRYPOINT [ "/usr/bin/env", "bash", "-l" ]
+
 RUN <<EOF
 #!/usr/bin/env bash
 
-chmod +x "/tmp/setup/setup.sh"
+# update
+apt-get update
+apt-get install -y \
+    curl
 
-"/tmp/setup/setup.sh"
+# setup host
+script=$(curl -fsSL "https://raw.githubusercontent.com/softvisio/scripts/main/setup-host.sh")
+source <(echo "$script")
 
-rm -rf "/tmp/setup"
+# install dependencies
+apt-get install -y \
+    apt-utils \
+    git \
+    gcc \
+    g++ \
+    make \
+    cmake \
+    libssl-dev \
+    gpg
 
 EOF
-
-ENTRYPOINT [ "/usr/bin/env", "bash", "-l" ]
