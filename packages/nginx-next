@@ -19,7 +19,6 @@ function build() {
     apt-get install -y gcc g++ make libpcre2-dev zlib1g-dev libssl-dev libmaxminddb-dev
 
     curl -fsSL https://nginx.org/download/nginx-$VERSION.tar.gz | tar --strip-components=1 -xz
-    # git clone https://github.com/softvisio/nginx-http-geoip2
     # git clone https://github.com/ZigzagAK/ngx_dynamic_upstream
 
     # brotli
@@ -30,9 +29,6 @@ function build() {
     cmake --build . --config Release --target brotlienc
     popd
 
-    # geoip2
-    git clone https://github.com/leev/ngx_http_geoip2_module
-
     # build
     # --user=%{nginx_user} \
     # --group=%{nginx_user} \
@@ -42,7 +38,6 @@ function build() {
     # --with-mail=dynamic \
     # --with-mail_ssl_module \
     # --with-http_dav_module \
-    # --add-dynamic-module=nginx-http-geoip2 \
     # --add-module=nginx-dynamic-upstream
 
     ./configure \
@@ -58,6 +53,8 @@ function build() {
         --with-http_auth_request_module \
         --with-http_degradation_module \
         --with-http_flv_module \
+        --with-stream_geoip_module \
+        --with-http_geoip_module \
         --with-http_gunzip_module \
         --with-http_gzip_static_module \
         --with-http_mp4_module \
@@ -73,8 +70,7 @@ function build() {
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \
         --with-stream_realip_module \
-        --add-module=ngx_brotli \
-        --add-module=ngx_http_geoip2_module
+        --add-module=ngx_brotli
 
     make $MAKE_FLAGS
 
