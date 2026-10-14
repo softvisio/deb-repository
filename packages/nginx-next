@@ -41,8 +41,8 @@ function build() {
     # --add-module=nginx-dynamic-upstream
 
     ./configure \
-        --add-module=ngx_brotli
-    --sbin-path=/usr/local/sbin/nginx \
+        --add-module=ngx_brotli \
+        --sbin-path=/usr/local/sbin/nginx \
         --with-cc-opt="$OPTFLAGS $(pcre-config --cflags)" \
         --with-file-aio \
         --with-http_addition_module \
