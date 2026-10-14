@@ -41,19 +41,14 @@ function build() {
     # --add-module=nginx-dynamic-upstream
 
     ./configure \
-        --sbin-path=/usr/local/sbin/nginx \
-        --with-threads \
-        --with-file-aio \
-        --with-pcre \
-        --with-pcre-jit \
-        --with-stream \
+        --add-module=ngx_brotli
+    --sbin-path=/usr/local/sbin/nginx \
         --with-cc-opt="$OPTFLAGS $(pcre-config --cflags)" \
-        --with-ld-opt="$LD_FLAGS -Wl,-E" \
+        --with-file-aio \
         --with-http_addition_module \
         --with-http_auth_request_module \
         --with-http_degradation_module \
         --with-http_flv_module \
-        --with-stream_geoip_module \
         --with-http_geoip_module \
         --with-http_gunzip_module \
         --with-http_gzip_static_module \
@@ -67,10 +62,15 @@ function build() {
         --with-http_sub_module \
         --with-http_v2_module \
         --with-http_v3_module \
+        --with-ld-opt="$LD_FLAGS -Wl,-E" \
+        --with-pcre \
+        --with-pcre-jit \
+        --with-stream \
+        --with-stream_geoip_module \
+        --with-stream_realip_module \
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \
-        --with-stream_realip_module \
-        --add-module=ngx_brotli
+        --with-threads
 
     make $MAKE_FLAGS
 
