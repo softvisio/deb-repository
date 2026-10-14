@@ -43,6 +43,9 @@ function build() {
     # --add-dynamic-module=nginx-http-geoip2 \
     # --add-module=nginx-dynamic-upstream
 
+    # XXX enable in nginx 1.32
+    # --with-http_geoip_module \
+    # --with-stream_geoip_module \
     ./configure \
         --add-module=ngx_brotli \
         --sbin-path=/usr/local/sbin/nginx \
@@ -52,7 +55,6 @@ function build() {
         --with-http_auth_request_module \
         --with-http_degradation_module \
         --with-http_flv_module \
-        --with-http_geoip_module \
         --with-http_gunzip_module \
         --with-http_gzip_static_module \
         --with-http_mp4_module \
@@ -69,7 +71,6 @@ function build() {
         --with-pcre \
         --with-pcre-jit \
         --with-stream \
-        --with-stream_geoip_module \
         --with-stream_realip_module \
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \
